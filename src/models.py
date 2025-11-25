@@ -33,7 +33,7 @@ class QuestionHistory(models.Model):
     - document : 어떤 문서에 대한 질문인지
     - question : 사용자가 한 질문
     - answer   : GPT가 생성한 답변
-    - confidence : 하이브리드 검색 상위 청크의 스코어(%) (옵션)
+    - confidence : 하이브리드 검색 상위 청크의 스코어(%)
     - created_at : 기록 시각
     """
     document = models.ForeignKey(
