@@ -1,0 +1,79 @@
+# ──────────────────────────────────────────────
+# Python
+# ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual Environment
+venv/
+.env/
+.venv/
+ENV/
+env/
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+
+# Compiled C extensions
+*.o
+*.a
+*.dylib
+*.dll
+*.lib
+
+# ──────────────────────────────────────────────
+# Django & Logs
+# ──────────────────────────────────────────────
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media/
+staticfiles/
+collectstatic/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# ──────────────────────────────────────────────
+# System / OS
+# ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ──────────────────────────────────────────────
+# Environment & API Keys
+# ──────────────────────────────────────────────
+*.env
+.env.*
+*.key
+*.pem
+
+# ──────────────────────────────────────────────
+# Build / Packaging
+# ──────────────────────────────────────────────
+build/
+dist/
+*.egg-info
+.eggs/
+
+# Pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ──────────────────────────────────────────────
+# Cache files
+# ──────────────────────────────────────────────
+.cache/
+pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# PyCharm
+.idea/
+*.iml
