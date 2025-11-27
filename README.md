@@ -29,10 +29,24 @@ GPT 모델과 의미 검색, BM25 검색을 조합해 질문과 가장 관련 �
 
 ## 실행 화면 및 결과물
 
-* 문서 업로드 페이지 스크린샷
+* 첫 페이지
+* <img width="1918" height="907" alt="홈" src="https://github.com/user-attachments/assets/6863ae21-073b-459a-9f52-09422807598e" />
+
+* 문서 업로드 페이지
+* <img width="1918" height="907" alt="문서 업로드" src="https://github.com/user-attachments/assets/c08e3c81-5b01-4fce-96b6-7ff30250d6a5" />
+
+* 문서 업로드 후 페이지
+* <img width="1918" height="913" alt="문서 업로드 후 첫 화면" src="https://github.com/user-attachments/assets/0a6508e8-308c-496a-9ee2-45d49b1427a1" />
+
 * 문서 요약 결과 화면
+* <img width="1917" height="906" alt="문서 요약 생성" src="https://github.com/user-attachments/assets/810fb29b-bd1e-4f27-8904-e0509cc217e2" />
+
 * RAG 질문하기 결과 화면
+* <img width="1918" height="915" alt="문서 기반 질문 결과" src="https://github.com/user-attachments/assets/a08b6744-f292-455d-aa82-4f92b5dd52ac" />
+
 * 대시보드 예시 캡처
+* <img width="1918" height="922" alt="대시보드 화면" src="https://github.com/user-attachments/assets/2fa48de1-93b7-412f-9d01-62c4bc1eaf26" />
+
 
 ## 트러블슈팅 & 개선 사항
 * 문서 기반 질문 정확도가 낮았던 문제
