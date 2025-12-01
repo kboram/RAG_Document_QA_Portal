@@ -28,20 +28,20 @@ def home(request):
     - 문서별 질문 개수 / 마지막 질문 시각 간단 통계 포함
     """
 
-    # 🔹 1) 검색어(q) 가져오기
+    # 1) 검색어(q) 가져오기
     q = request.GET.get("q", "").strip()
 
-    # 🔹 2) 기본 쿼리셋
+    # 2) 기본 쿼리셋
     base_qs = UploadedDocument.objects.all()
 
-    # 🔹 3) 검색어가 있으면 제목 + 내용으로 필터
+    # 3) 검색어가 있으면 제목 + 내용으로 필터
     if q:
         base_qs = base_qs.filter(
             Q(title__icontains=q) |
             Q(content__icontains=q)
         )
 
-    # 🔹 4) 문서별 간단 통계 annotate
+    # 4) 문서별 간단 통계 annotate
     docs = (
         base_qs
         .annotate(
@@ -133,7 +133,7 @@ def document_detail(request, pk):
     if request.method == "POST":
         mode = request.POST.get("mode", "qa")  # 기본값 'qa'
 
-        # ---------- (A) 문서 요약 모드 ----------
+        # ---------- 문서 요약 모드 ----------
         if mode == "summary":
             if doc.content:
                 # 이 문서에 해당하는 청크들 가져오기
@@ -172,7 +172,7 @@ def document_detail(request, pk):
             else:
                 summary_text = "이 문서에는 저장된 텍스트 내용이 없습니다."
 
-        # ---------- (B) 문서 기반 질문 모드 ----------
+        # ---------- 문서 기반 질문 모드 ----------
         elif mode == "qa":
             question = (request.POST.get("question") or "").strip()
 
@@ -185,7 +185,7 @@ def document_detail(request, pk):
                     top_score = search_results[0].get("score", 0.0)
                     confidence = int(round(float(top_score) * 100))
 
-                    # 🔹 임계값(Threshold) 설정: 너무 낮으면 "모르겠다" 처리
+                    # 임계값(Threshold) 설정: 너무 낮으면 "모르겠다" 처리
                     threshold = 0.35  # 필요하면 0.3~0.4 사이에서 조절해 보기
 
                     if top_score < threshold:
@@ -223,7 +223,7 @@ def document_detail(request, pk):
             else:
                 llm_answer = "질문이 비어 있거나, 문서 내용이 없습니다."
 
-        # ---------- (C) 결과 초기화 모드 ----------
+        # ---------- 결과 초기화 모드 ----------
         elif mode == "reset":
             summary_text = None
             question = None
